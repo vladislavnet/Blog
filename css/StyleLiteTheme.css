@@ -1,0 +1,56 @@
+/* Доп Задание сделать тёмную тему */
+body{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+header{
+    position: relative;
+}
+
+hr{
+    width: 90%;
+}
+
+header>nav>ul{
+    text-align:center;
+    margin: 0;
+    padding: 0;
+}
+
+header>nav>ul>li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    border-bottom:  1px solid black;
+    width:  150px;
+    text-align: center;
+    margin: 2px;
+    transition: .5s;
+    height: 80px;
+}
+
+header>nav>ul>li>a{
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section {
+    min-height: 90vh;
+    margin: 10px 5px;
+}
+
+.section h2{
+    font-size: 56px;
+}
+
