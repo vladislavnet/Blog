@@ -1,0 +1,77 @@
+.switch,
+.switch-label,
+.switch-slider {
+    width: 77px;
+    height: 27px;
+}
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+}
+
+.switch-check {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch-label,
+.switch-slider {
+    position: absolute;
+    top: 0;
+}
+
+.switch-label {
+    left: 0;
+    text-indent: -9999px;
+}
+
+.switch-slider {
+    border-radius: 13px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) inset,
+    0 0 4px rgba(0, 0, 0, 0.5) inset,
+    0 5px 4px 1px rgba(0, 0, 0, 0.3) inset,
+    0 13px 0 rgba(0, 0, 0, 0.07) inset;
+    transition: width 100ms linear;
+}
+
+.switch-slider-on {
+    left: 0;
+    width: 27px;
+    background: #DFD9D9;
+}
+
+.switch-slider-off {
+    right: 0;
+    background: #726C6C;
+}
+
+.switch-slider-off:after {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    background: linear-gradient(#D0D0D0, #FDFDFD);
+    box-shadow: 0 0 2px 2px #FFF inset,
+    0 0 4px 1px rgba(0, 0, 0, 0.6);
+    content: '';
+}
+
+.switch-label:active .switch-slider-off:after,
+.switch-check:focus + .switch-label .switch-slider-off:after {
+    background: #D5D5D5;
+    background: linear-gradient(#C8C8C8, #E4E4E4);
+}
+
+.switch-check:checked + .switch-label .switch-slider-on {
+    width: 77px;
+}
+
+.switch-check:checked + .switch-label .switch-slider-off {
+    width: 27px;
+}

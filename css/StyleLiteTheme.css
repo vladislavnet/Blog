@@ -1,56 +1,37 @@
 /* Доп Задание сделать тёмную тему */
 body{
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    transition: 1s;
 }
 
 a{
     color: black;
-}
-
-a:hover{
-    text-decoration: none;
-}
-
-header{
-    position: relative;
-}
-
-hr{
-    width: 90%;
-}
-
-header>nav>ul{
-    text-align:center;
-    margin: 0;
-    padding: 0;
+    transition: 1s;
 }
 
 header>nav>ul>li{
-    position: relative;
-    list-style: none;
-    display: inline-block;
     border-bottom:  1px solid black;
-    width:  150px;
-    text-align: center;
-    margin: 2px;
-    transition: .5s;
-    height: 80px;
+    transition: 1s;
+}
+hr{
+    color: black;
+    transition: 1s;
 }
 
-header>nav>ul>li>a{
-    position:absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.menu-wrap {
+    background-color: #545864;
+    color: white;
 }
-
-.section {
-    min-height: 90vh;
-    margin: 10px 5px;
+.menu-wrap a{
+    color: white;
 }
-
-.section h2{
-    font-size: 56px;
+.menu-wrap a:hover{
+    color: black;
 }
-
+.Section-Smallbox:hover{
+    transition: .5s;    
+    -webkit-box-shadow: 10px 10px 19px -1px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 19px -1px rgba(0,0,0,1);
+    box-shadow: 10px 10px 19px -1px rgba(0,0,0,1);
+}

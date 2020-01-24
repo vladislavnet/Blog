@@ -1,0 +1,39 @@
+/* Доп Задание сделать тёмную тему */
+body{
+    background-color: #1E1E1E;
+    color: white;
+    transition: 1s;
+}
+
+a{
+    color: white;
+    transition: 1s;
+}
+
+hr{
+    color: white;
+    transition: 1s;
+}
+
+header>nav>ul>li{
+    border-bottom:  1px solid white;
+    transition: 1s;
+}
+
+.menu-wrap {
+    background-color: #DAD6D6;
+    color: black;
+}
+
+.menu-wrap a{
+    color: black;
+}
+.menu-wrap a:hover{
+    color: white;
+}
+.Section-Smallbox:hover{
+    transition: .5s;    
+    -webkit-box-shadow: 10px 10px 19px -1px rgba(230,230,230,1);
+    -moz-box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
+    box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
+}
