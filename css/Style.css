@@ -41,7 +41,7 @@ header>nav>ul>li>a{
 }
 
 .section {
-    min-height: 90vh;
+    /* min-height: 90vh; */
     margin: 10px 5px;
 }
 
@@ -69,8 +69,8 @@ header>nav>ul>li>a{
     border: 1px solid black;
     color: black;
     text-align: center;
-    height: 30vh;
-    width: 30vh;
+    /* height: 200px; */
+    /* width: 300px; */
     border-radius: 6px;
     margin: 10px;
 }

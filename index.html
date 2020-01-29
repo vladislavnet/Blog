@@ -1,12 +1,10 @@
-<!-- Дз: Учетка на ГитХаб, создать репозиторий и прочее dsad -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="css/Style.css">
@@ -18,12 +16,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loaderArea">
+        <div class="loader"></div>
+    </div>
     <!-- Шапка -->
     <header>
-      <div style="margin-left: 50px;">
-        <input id="txt">
-        <input class="txt check" type="checkbox">
-      </div>
       <span class="toggle-button">
         <div class="menu-bar menu-bar-top"></div>
         <div class="menu-bar menu-bar-middle"></div>
@@ -54,7 +51,7 @@
             </ul>
         </nav>
         <div>
-            <img src="../img/dayz-1.jpg" alt="Programming" class="header-img"/>
+            <img src="img/dayz-1.jpg" alt="Programming" class="header-img"/>
         </div>
     </header>
 
@@ -63,13 +60,13 @@
 
         <div id="Section1" class="section">
             <h2 class="text-center">section1</h2>
-            <div class="container">
-              <div class="row">
-                <div class="col Section-Smallbox"><img src="img/earth.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col Section-Smallbox"><img src="img/survavial.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col Section-Smallbox"><img src="img/car.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col Section-Smallbox"><img src="img/vzaim.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col Section-Smallbox"><img src="img/target.png" class="Section-Smallbox-img" alt="..."></div>
+            <div class="<div class="container-fluid">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 Section-Smallbox"><img src="img/earth.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 Section-Smallbox"><img src="img/survavial.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 Section-Smallbox"><img src="img/car.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 Section-Smallbox"><img src="img/vzaim.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 Section-Smallbox"><img src="img/target.png" class="Section-Smallbox-img" alt="..."></div>
               </div>
             </div>
         </div>
@@ -114,7 +111,6 @@
         <div id="Section3" class="section">
             <h2 class="text-center">section3</h2>
             <div>
-              <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
             </div>
         </div>
 
@@ -176,12 +172,26 @@
         // for(const key in a){
         //   console.log(`key ${key}, value: ${a[key]}`);
         // }
+        // setTimeout(function(){
+        //   var preloader = document.getElementById('loader')
+        //   preloader.outerHTML = "";
+        //   var preloader = document.getElementById
+        // }, 3000);
     </script>
 
     <!-- Тестовый скрипт на смену темы -->
     <script src="js/SwitchTheme.js"></script>
     <!-- Скрипт боковой менюшки -->
     <script src="js/Menu.js"></script>
+
+    <script>
+      $(window).on('load', function () {
+        $preloader = $('.loaderArea'),
+          $loader = $preloader.find('.loader');
+        //$loader.fadeOut();
+        $preloader.delay(10).fadeOut('slow');
+      });
+    </script>
          
 </body>
 </html>
