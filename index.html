@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/Switch.css">
     <link rel="stylesheet" href="css/Menu.css">
@@ -16,16 +17,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="loaderArea">
+    <!-- <div class="loaderArea">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <!-- Шапка -->
     <header>
-      <span class="toggle-button">
-        <div class="menu-bar menu-bar-top"></div>
-        <div class="menu-bar menu-bar-middle"></div>
-        <div class="menu-bar menu-bar-bottom"></div>
-      </span>
+      <div class="top-button">
+        <span class="toggle-button">
+          <div class="menu-bar menu-bar-top"></div>
+          <div class="menu-bar menu-bar-middle"></div>
+          <div class="menu-bar menu-bar-bottom"></div>
+        </span>
+        <div class="switch">
+          <input type="checkbox" id="switch-1" class="switch-check">
+          <label for="switch-1" class="switch-label">
+              <span class="switch-slider switch-slider-on"></span>
+              <span class="switch-slider switch-slider-off"></span>
+          </label>
+        </div>
+      </div>
       <div class="menu-wrap">
         <div class="menu-sidebar">
             <ul class="menu menu-ul">
@@ -36,18 +46,11 @@
             </ul>           
         </div>
       </div>
-        <div class="switch">
-            <input type="checkbox" id="switch-1" class="switch-check">
-            <label for="switch-1" class="switch-label">
-                <span class="switch-slider switch-slider-on"></span>
-                <span class="switch-slider switch-slider-off"></span>
-            </label>
-          </div>
-        <nav>
+        <nav class="nav-mg">
             <ul>
-               <li><a href="#Section1">section1</a></li>
+               <li><a href="#Section1">Разделы</a></li>
                <li><a href="#Section2">Карусель</a></li>
-               <li><a href="#Section3">section3</a></li>
+               <li><a href="#Section3">Об Игре</a></li>
             </ul>
         </nav>
         <div>
@@ -62,11 +65,11 @@
             <h2 class="text-center">section1</h2>
             <div class="<div class="container-fluid">
               <div class="row justify-content-center">
-                <div class="col-3 col-sm-3 col-md-4 col-lg-2 Section-Smallbox"><img src="img/earth.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col-3 col-sm-3 col-md-4 col-lg-2 Section-Smallbox"><img src="img/survavial.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col-3 col-sm-3 col-md-4 col-lg-2 Section-Smallbox"><img src="img/car.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col-3 col-sm-3 col-md-4 col-lg-2 Section-Smallbox"><img src="img/vzaim.png" class="Section-Smallbox-img" alt="..."></div>
-                <div class="col-3 col-sm-3 col-md-4 col-lg-2 Section-Smallbox"><img src="img/target.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/earth.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/survavial.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/car.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/vzaim.png" class="Section-Smallbox-img" alt="..."></div>
+                <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/target.png" class="Section-Smallbox-img" alt="..."></div>
               </div>
             </div>
         </div>
@@ -110,7 +113,7 @@
 
         <div id="Section3" class="section">
             <h2 class="text-center">section3</h2>
-            <div>
+            <div class="void-block">
             </div>
         </div>
 
@@ -189,7 +192,7 @@
         $preloader = $('.loaderArea'),
           $loader = $preloader.find('.loader');
         //$loader.fadeOut();
-        $preloader.delay(10).fadeOut('slow');
+        $preloader.delay(4000).fadeOut('slow');
       });
     </script>
          

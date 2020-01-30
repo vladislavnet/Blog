@@ -2,22 +2,22 @@
 body{
     background-color: #1E1E1E;
     color: white;
-    transition: 1s;
+    transition: .5s;
 }
 
 a{
     color: white;
-    transition: 1s;
+    transition: .5s;
 }
 
 hr{
     color: white;
-    transition: 1s;
+    transition: .5s;
 }
 
 header>nav>ul>li{
     border-bottom:  1px solid white;
-    transition: 1s;
+    transition: .5s;
 }
 
 .menu-wrap {
@@ -36,4 +36,9 @@ header>nav>ul>li{
     -webkit-box-shadow: 10px 10px 19px -1px rgba(230,230,230,1);
     -moz-box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
     box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
+}
+@media (max-width: 768px){
+    .top-button{
+        border-bottom: 1px solid white;
+    }
 }
