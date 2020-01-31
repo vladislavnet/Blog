@@ -36,6 +36,18 @@ hr{
     box-shadow: 10px 10px 19px -1px rgba(0,0,0,1);
 }
 
+.toggle-button .menu-bar-top {
+    border: 2px solid black;
+  }
+  .toggle-button .menu-bar-middle {
+    background-color: black;
+  }
+  .toggle-button .menu-bar-bottom {
+    border: 2px solid black;
+  }
+ footer{
+    border-top: 1px solid black;
+ }
 @media (max-width: 768px){
     .top-button{
         border-bottom: 1px solid black;

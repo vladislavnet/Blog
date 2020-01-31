@@ -31,11 +31,23 @@ header>nav>ul>li{
 .menu-wrap a:hover{
     color: white;
 }
+.toggle-button .menu-bar-top {
+    border: 2px solid white;
+  }
+  .toggle-button .menu-bar-middle {
+    background-color: white;
+  }
+  .toggle-button .menu-bar-bottom {
+    border: 2px solid white;
+  }
 .Section-Smallbox:hover{
     transition: .5s;    
     -webkit-box-shadow: 10px 10px 19px -1px rgba(230,230,230,1);
     -moz-box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
     box-shadow: 10px 10px 19px -1px rgba(255,255,255,1);
+}
+footer{
+    border-top: 1px solid white;
 }
 @media (max-width: 768px){
     .top-button{

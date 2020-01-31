@@ -17,9 +17,10 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="loaderArea">
+    <samp id="Section4"></samp>
+    <div class="loaderArea">
         <div class="loader"></div>
-    </div> -->
+    </div>
     <!-- Шапка -->
     <header>
       <div class="top-button">
@@ -35,6 +36,10 @@
               <span class="switch-slider switch-slider-off"></span>
           </label>
         </div>
+        <button class="button-eye" id="switch-eye">
+          <!-- <span style="font-size: 14px; padding-left: 5px; padding-right: 5px;">СВ</span> -->
+          <img src="img/eye.png">
+        </button>
       </div>
       <div class="menu-wrap">
         <div class="menu-sidebar">
@@ -62,7 +67,7 @@
     <div>
 
         <div id="Section1" class="section">
-            <h2 class="text-center">section1</h2>
+            <h2 class="text-center">Разделы</h2>
             <div class="<div class="container-fluid">
               <div class="row justify-content-center">
                 <div class="col-3 col-sm-3 col-lg-2 Section-Smallbox"><img src="img/earth.png" class="Section-Smallbox-img" alt="..."></div>
@@ -112,8 +117,18 @@
         <hr/>
 
         <div id="Section3" class="section">
-            <h2 class="text-center">section3</h2>
-            <div class="void-block">
+            <h2 class="text-center">Об игре</h2>
+            <div class="text-section">
+               <p>DayZ Standalone - многопользовательская игра в жанре Survival с аутентичным открытым миром. 
+               Разработкой занимается компания Bohemia Interactive, подарившая нам серию игр ArmA и модификацию DayZ Mod для ArmA 2. 
+               -версия игры для PC вышла в свет в конце 2013 года, во всем известной игровой платформе Steam. 
+               Недавно произошел полноценный релиз игры, а так же состоялся выход игры на популярных игровых консолях, таких как Xbox One и Playstation 4. 
+               Разработка игры продолжается.</p>
+              <br>
+               <p>Постсоветское государство Чернарусь поражено неизвестным вирусом, 
+               превращающим людей в обезумевших зомби. Борьба за ресурсы ожесточила выживших и заставила потерять всё.
+               Ты - один из немногих, кому повезло оказаться невосприимчивым к вирусу.
+               Как далеко ты зайдёшь, чтобы выжить?</p>
             </div>
         </div>
 
@@ -121,6 +136,7 @@
     <footer>
         <p class="text-center">&copy;2020 Vladislav Panyukov</p>
     </footer>
+    <a href="#Section4" class="back-to-top"></a>
 
     <!-- Подключения скриптов -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
@@ -193,6 +209,77 @@
           $loader = $preloader.find('.loader');
         //$loader.fadeOut();
         $preloader.delay(4000).fadeOut('slow');
+      });
+
+      function backToTop(){
+        let but = $(".back-to-top");
+        $(window).on('scroll', () => {
+          if($(this).scrollTop() >= 100){
+            but.fadeIn();
+          } else {
+            but.fadeOut()
+          }
+        });
+      }
+      backToTop();
+    </script>
+    <script src="js/SwitchEye.js"></script>
+
+
+    <script>
+      let flagEye = true
+
+      $('#switch-eye').on('click', function() {
+        if($(window).width() >= '768')
+        {
+          if(flagEye == true){
+            $('body').css({
+            "font-size": "+=5",
+            });
+            $('.text-center').css({
+            "font-size": "+=15",
+            });
+            $('.text-section').css({
+            "font-size": "+=10",
+            });            
+            flagEye = false;
+          } else {
+            $('body').css({
+            "font-size": "-=5",
+            });
+            $('.text-center').css({
+            "font-size": "-=15",
+            });
+            $('.text-section').css({
+            "font-size": "-=10",
+            })
+            flagEye = true;
+          }
+        } else {
+          if(flagEye == true){
+            $('body').css({
+            "font-size": "+=1",
+            });
+            $('.text-center').css({
+            "font-size": "+=15",
+            });
+            $('.text-section').css({
+            "font-size": "+=5",
+            });
+            flagEye = false;
+          } else {
+            $('body').css({
+            "font-size": "-=1",
+            });
+            $('.text-center').css({
+            "font-size": "-=15",
+            });
+            $('.text-section').css({
+            "font-size": "-=5",
+            });
+            flagEye = true;
+          }
+        }
       });
     </script>
          

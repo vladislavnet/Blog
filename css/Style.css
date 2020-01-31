@@ -72,7 +72,70 @@ header>nav>ul>li>a{
 .void-block{
     height: 300px;
 }
+.text-section{
+    padding: 50px 80px 80px 80px;
+    font-size: 18px;
+    text-indent: 40px;
+    line-height: 30px;
+}
+footer{
+    padding-top: 10px;
+}
 
+.back-to-top{
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border:  1px solid #AAA9BA;
+    border-radius: 10%;
+    background-color: #AAA9BA;
+    opacity: .5;
+    display: none;
+}
+
+.back-to-top:hover{
+    opacity: 1;
+}
+.back-to-top::before,
+.back-to-top::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.back-to-top::before{
+    width: 2px;
+    height: 20px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: black;
+}
+.back-to-top::after{
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%,-50%) rotate(45deg);
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.button-eye{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0px;
+    border: 2px solid #AAA9BA;
+    background-color: white;
+}
+.button-eye img{
+    margin: 0;
+    padding: 0;
+}
 @media (max-width: 768px){
     body{
         font-size: 5vw;
@@ -94,5 +157,15 @@ header>nav>ul>li>a{
     }
     header>nav>ul>li{
         height: 20px;
+    }
+    .text-section{
+        padding: 5px 8px 8px 8px;
+        font-size: 14px;
+        text-indent: 20px;
+        line-height: 20px;
+    }
+    .button-eye{
+        top: 15px;
+        right: 120px;
     }
 }
